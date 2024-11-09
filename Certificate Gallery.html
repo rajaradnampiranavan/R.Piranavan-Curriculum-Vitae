@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nature Gallery</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="css/styleGallery.css" rel="stylesheet">
+    
+</head>
+
+<body>
+
+    <div class="gallery-container">
+        <div class="gallery-header">
+            'Nature' — 19 Photos
+        </div>
+      
+     <!-- Repeat this block for each photo in the gallery -->
+    <div class="gallery-grid">
+    <div class="gallery-item" onclick="openLightbox('img/AWS.jpg')">
+        <img src="img/AWS.jpg" alt="Nature Image 1">
+    </div>
+    <div class="gallery-item" onclick="openLightbox('img/Front-End Web Development.jpg')">
+        <img src="img/Front-End Web Development.jpg" alt="Nature Image 2">
+    </div>
+    <div class="gallery-item" onclick="openLightbox('img3.jpg')">
+        <img src="img3.jpg" alt="Nature Image 3">
+    </div>
+    <!-- Add more images as needed -->
+    </div>
+
+            <!-- Add more images as needed -->
+        
+    </div>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox">
+        <span class="close-btn" onclick="closeLightbox()">&times;</span>
+        <img id="lightbox-img" src="" alt="Zoomed Image">
+    </div>
+
+    <script>
+        function openLightbox(imageSrc) {
+            document.getElementById('lightbox').style.display = 'flex';
+            document.getElementById('lightbox-img').src = imageSrc;
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').style.display = 'none';
+        }
+    </script>
+
+</body>
+
+</html>
